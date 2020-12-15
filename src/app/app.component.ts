@@ -14,17 +14,21 @@ export class AppComponent implements OnInit {
   }
 
   newBabysitter: Babysitter = {
-    fullname: '',
+    id: 0,
+    firstName: '',
+    lastName: '',
     postalCode: '',
 
   };
 
   babysitters: Babysitter[] = [{
-    fullname: 'Kasia Molenda',
+    firstName: 'Kasia',
+    lastName: 'Molenda',
     postalCode: '03-138'
   },
     {
-      fullname: 'Marcin Nowak',
+      firstName: 'Marcin',
+      lastName: 'Nowak',
       postalCode: '03-252'
     }];
 

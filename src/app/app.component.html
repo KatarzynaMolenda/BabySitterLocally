@@ -1,7 +1,13 @@
 <h1>Babysitter Locally</h1>
 <form (ngSubmit)="createBabysitter()">
   <label>
-    Full name: <input type="text" name="babysitterFullName" [(ngModel)]="newBabysitter.fullname">
+    First name: <input type="text" name="babysitterFirstName" [(ngModel)]="newBabysitter.firstName">
+  </label>
+</form>
+
+<form (ngSubmit)="createBabysitter()">
+  <label>
+    Last name: <input type="text" name="babysitterLastName" [(ngModel)]="newBabysitter.lastName">
   </label>
 </form>
 <form (ngSubmit)="createBabysitter()">

@@ -1,5 +1,6 @@
 export interface Babysitter {
   id?: number;
-  fullname: string;
+  firstName: string;
+  lastName: string;
   postalCode: string;
 }
