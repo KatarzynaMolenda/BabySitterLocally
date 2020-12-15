@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-loginpage',
-  templateUrl: './loginpage.component.html'
+  selector: 'app-login',
+  templateUrl: './login.component.html'
 })
-export class LoginpageComponent {
+export class LoginComponent {
 
   onButtonClick(): void {
     console.log('Kliknięto przycisk');
