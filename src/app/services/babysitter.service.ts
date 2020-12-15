@@ -15,23 +15,26 @@ export class BabysitterService implements OnInit {
     id: 0,
     firstName: '',
     lastName: '',
-    postalCode: '',
-
+   phoneNumber: 0,
+    primaryEmail: '',
   };
 
   babysitters: Babysitter[] = [{
     firstName: 'Kasia',
     lastName: 'Molenda',
-    postalCode: '03-138'
+    phoneNumber: 748378935,
+    primaryEmail: 'dgfisg'
   },
     {
       firstName: 'Marcin',
       lastName: 'Nowak',
-      postalCode: '03-252'
+      phoneNumber: 2037,
+      primaryEmail: 'dhsjakgh'
     }];
 
-  private url = 'http://localhost:8080/babysitter';
+  private url = 'http://localhost:4200/babysitter';
 
+  // tslint:disable-next-line:contextual-lifecycle
   ngOnInit(): void {
     this.loadData();
   }
@@ -46,14 +49,12 @@ export class BabysitterService implements OnInit {
       .subscribe(() => this.loadData());
   }
 
-  createBabysitter(): void {
-    this.httpClient.post<Babysitter>(this.url, this.newBabysitter)
-      .subscribe(babysitter => this.babysitters.push());
-
-  }
-
   getBabysitter(babysitter: Babysitter, babysitterId: number): void {
     this.httpClient.get<Babysitter>(this.url + babysitterId)
       .subscribe(babySitterFromHttps => babysitter = babySitterFromHttps);
+  }
+  createBabysitter(): void {
+    this.httpClient.post<Babysitter>(this.url, this.newBabysitter)
+      .subscribe(babysitter => this.babysitters.push());
   }
 }

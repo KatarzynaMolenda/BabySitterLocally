@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I offer to help with your kids</title>
+</head>
+<body>
+<form (ngSubmit)="createEvent()">
+  <label>
+    Starting date <input type="datetime-local" name="eventStartingDate" [(ngModel)]="newEvent.startingDate">
+  </label>
+</form>
+<form (ngSubmit)="createEvent()">
+  <label>
+    Ending date: <input type="datetime-local" name="eventEndingDate" [(ngModel)]="newEvent.endingDate">
+  </label>
+</form>
+</body>
+</html>

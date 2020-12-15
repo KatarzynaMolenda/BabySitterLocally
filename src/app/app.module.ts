@@ -6,17 +6,35 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
-
+import {CreateBabysitterComponent} from './create-babysitter/create-babysitter.component';
+import {NeedHelpComponent} from './need-help/need-help.component';
+import {RouterModule, Routes} from '@angular/router';
+import {OfferHelpComponent} from './offer-help/offer-help.component';
+const root: Routes = [{
+  path: 'create',
+  component: CreateBabysitterComponent
+}, {
+  path: 'need',
+  component: NeedHelpComponent
+}, {
+  path: 'login',
+  component: LoginComponent
+}
+];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreateBabysitterComponent,
+    NeedHelpComponent,
+    OfferHelpComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(root)
   ],
   providers: [],
   bootstrap: [AppComponent]

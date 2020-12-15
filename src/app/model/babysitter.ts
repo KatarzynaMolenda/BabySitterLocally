@@ -1,7 +1,10 @@
+import {Child} from './child';
+
 export interface Babysitter {
   id?: number;
   firstName: string;
   lastName: string;
-  postalCode: string;
-
+  phoneNumber: number;
+  primaryEmail: string;
+  ownChildren?: Child;
 }
