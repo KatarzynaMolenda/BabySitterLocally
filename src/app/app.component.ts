@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Babysitter} from './babysitter';
+import {Babysitter} from './model/babysitter';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
