@@ -5,9 +5,13 @@
   <title>Login</title>
 </head>
 <body>
-<form method="post">
+<form method="post" (ngSubmit)="onFormSubmit()">
 
-  <div class="container">
+    <h1>Babysitter Locally</h1>
+    <h3>Leave your kids to other people and have fun!</h3>
+    <hr>
+    <div class="subTitle">LOGIN</div>
+
     <div>
       <label class="logonLabel" for="uname"><b>Email:</b></label>
       <input type="email" placeholder="Enter Email" name="uname" required id="uname">
@@ -22,8 +26,7 @@
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
-
+<hr>
   <div class="container" style="background-color:#f1f1f1">
     <span class="forgot-password"><a [routerLink]="['forgot-password']">Forgot password?</a></span>
   </div>
