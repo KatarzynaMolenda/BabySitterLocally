@@ -14,6 +14,9 @@ const root: Routes = [{
   path: 'create',
   component: CreateBabysitterComponent
 }, {
+  path: 'offer',
+  component: OfferHelpComponent
+}, {
   path: 'need',
   component: NeedHelpComponent
 }, {
