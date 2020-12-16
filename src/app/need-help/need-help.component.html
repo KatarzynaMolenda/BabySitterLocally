@@ -5,8 +5,27 @@
   <title>I need help with my kids!</title>
 </head>
 <body>
-<form>
+Our available nannies:
 
-</form>
+<table>
+  <table>
+    <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone number</th>
+      <th>E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let babysitter of babysitters">
+      <td>{{babysitter.firstName}}</td>
+      <td>{{babysitter.lastName}}</td>
+      <td>{{babysitter.phoneNumber}}</td>
+      <td>{{babysitter.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+</table>
 </body>
 </html>

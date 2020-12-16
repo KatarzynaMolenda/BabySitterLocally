@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
-import {BabysitterService} from '../services/babysitter.service';
 import {Babysitter} from '../model/babysitter';
 
 @Component({
@@ -13,7 +12,7 @@ import {Babysitter} from '../model/babysitter';
 export class OfferHelpComponent implements OnInit {
   babySitter: Babysitter = {id: 0, firstName: '', lastName: '', phoneNumber: '', email: ''};
 
-  constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute, private babysitterService: BabysitterService) {
+  constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {

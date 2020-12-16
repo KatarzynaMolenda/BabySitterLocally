@@ -1,28 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Babysitter} from '../model/babysitter';
-import {BabysitterService} from '../services/babysitter.service';
-import {HttpClient} from '@angular/common/http';
+import {CreateBabysitterComponent} from '../create-babysitter/create-babysitter.component';
 
 @Component({
   selector: 'app-need-help',
   templateUrl: './need-help.component.html',
   styleUrls: ['./need-help.component.css']
 })
-export class NeedHelpComponent implements OnInit {
-  babySitter: Babysitter = {id: 0, firstName: '', lastName: '', phoneNumber: '', email: ''};
-  babysitterId = this.activatedRoute.snapshot.params.babysitterId;
-  newBabysitter: Babysitter;
-  private url = 'http://localhost:8080/babysitter';
-
-  constructor(private activatedRoute: ActivatedRoute,
-              private babysitterService: BabysitterService,
-              private httpClient: HttpClient) {
-  }
-
+export class NeedHelpComponent extends CreateBabysitterComponent implements OnInit {
   ngOnInit(): void {
-    this.babysitterService.getBabysitter(this.babySitter, this.babysitterId);
+    this.getBabysitters();
   }
-
 
 }

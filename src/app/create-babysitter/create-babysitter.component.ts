@@ -8,6 +8,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./create-babysitter.component.css']
 })
 export class CreateBabysitterComponent implements OnInit {
+  private url = 'http://localhost:8080/babysitter';
   babysitters: Babysitter[] = [];
   newBabysitter: Babysitter = {
     firstName: '',
@@ -19,15 +20,17 @@ export class CreateBabysitterComponent implements OnInit {
   constructor(public httpClient: HttpClient) {
   }
 
-  getFromServer(): void {
-    this.httpClient.get<Babysitter[]>('http://localhost:8080/babysitter')
-      .subscribe(babysitters => this.babysitters = babysitters);
-  }
   ngOnInit(): void {
-    this.getFromServer();
+    // this.getFromServer();
   }
+
   createBabysitter(): void {
-    this.httpClient.post<Babysitter>('http://localhost:8080/babysitter', this.newBabysitter)
-      .subscribe(() => this.getFromServer());
+    this.httpClient.post<Babysitter>(this.url, this.newBabysitter)
+      .subscribe(() => this.getBabysitters());
+  }
+
+  getBabysitters(): void {
+    this.httpClient.get<Babysitter[]>(this.url)
+      .subscribe(babysitters => this.babysitters = babysitters);
   }
 }
