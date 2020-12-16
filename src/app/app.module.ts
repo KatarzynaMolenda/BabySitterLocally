@@ -17,8 +17,11 @@ const root: Routes = [{
   path: 'need',
   component: NeedHelpComponent
 }, {
-  path: 'login',
+  path: '',
   component: LoginComponent
+}, {
+  path: 'register',
+  component: RegisterComponent
 }
 ];
 @NgModule({
@@ -36,8 +39,12 @@ const root: Routes = [{
     FormsModule,
     RouterModule.forRoot(root)
   ],
+  exports: [
+    RouterModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
+

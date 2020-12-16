@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {CreateBabysitterComponent} from '../create-babysitter/create-babysitter.component';
 import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,9 @@ import {HttpClient} from '@angular/common/http';
 })
 export class RegisterComponent extends CreateBabysitterComponent{
 
+  constructor(public httpClient: HttpClient, private activeRoute: ActivatedRoute) {
+    super(httpClient);
+  }
 
   onButtonClick(): void {
     console.log('Kliknięto przycisk');

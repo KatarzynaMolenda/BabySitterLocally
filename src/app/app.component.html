@@ -5,8 +5,11 @@
   <button>I can help you with your kids!</button>
 </div>
 
-<hr>
-<app-login></app-login>
-
-<hr>
-<app-register></app-register>
+<div id="container">
+  <div id="parent">
+    <div id="left"></div>
+    <div id="right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
