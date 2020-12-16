@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
-import {Babysitter} from '../model/babysitter';
+import {ChildCareEventService} from '../services/ChildCareEvent.service';
 
 @Component({
   selector: 'app-offer-help',
@@ -9,10 +9,10 @@ import {Babysitter} from '../model/babysitter';
   styleUrls: ['./offer-help.component.css']
 })
 
-export class OfferHelpComponent implements OnInit {
-  babySitter: Babysitter = {id: 0, firstName: '', lastName: '', phoneNumber: '', email: ''};
+export class OfferHelpComponent extends ChildCareEventService implements OnInit {
 
-  constructor(private httpClient: HttpClient, private activatedRoute: ActivatedRoute) {
+  constructor(httpClient: HttpClient, private activatedRoute: ActivatedRoute) {
+    super(httpClient);
   }
 
   ngOnInit(): void {

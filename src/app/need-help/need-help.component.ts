@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./need-help.component.css']
 })
 export class NeedHelpComponent extends BabysitterService implements OnInit {
-  constructor(public httpClient: HttpClient, private activeRoute: ActivatedRoute) {
+  constructor(httpClient: HttpClient, private activeRoute: ActivatedRoute) {
     super(httpClient);
   }
   ngOnInit(): void {
