@@ -6,14 +6,13 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
-import {CreateBabysitterComponent} from './create-babysitter/create-babysitter.component';
 import {NeedHelpComponent} from './need-help/need-help.component';
 import {RouterModule, Routes} from '@angular/router';
 import {OfferHelpComponent} from './offer-help/offer-help.component';
 import {MainViewComponent} from './main-view/main-view.component';
 const root: Routes = [{
   path: 'create',
-  component: CreateBabysitterComponent
+  component: RegisterComponent
 }, {
   path: 'offer',
   component: OfferHelpComponent
@@ -36,7 +35,6 @@ const root: Routes = [{
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    CreateBabysitterComponent,
     NeedHelpComponent,
     OfferHelpComponent,
     MainViewComponent

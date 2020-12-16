@@ -8,7 +8,7 @@ import {Babysitter} from '../model/babysitter';
 })
 
 export class BabysitterService implements OnInit {
-  constructor(private httpClient: HttpClient) {
+  constructor(public httpClient: HttpClient) {
   }
 
   newBabysitter: Babysitter = {
@@ -39,7 +39,7 @@ export class BabysitterService implements OnInit {
     this.loadData();
   }
 
-  private loadData(): void {
+  loadData(): void {
     this.httpClient.get<Babysitter[]>(this.url)
       .subscribe(babysitters => this.babysitters = babysitters);
   }

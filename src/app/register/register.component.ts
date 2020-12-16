@@ -1,16 +1,29 @@
 import {Component} from '@angular/core';
-import {CreateBabysitterComponent} from '../create-babysitter/create-babysitter.component';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
+import {Babysitter} from '../model/babysitter';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html'
 })
-export class RegisterComponent extends CreateBabysitterComponent{
+export class RegisterComponent{
+
+  private url = 'http://localhost:8080/babysitter';
+  newBabysitter: Babysitter = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: ''
+  };
+
+  createBabysitter(): void {
+    this.httpClient.post<Babysitter>(this.url, this.newBabysitter)
+      .subscribe();
+  }
+
 
   constructor(public httpClient: HttpClient, private activeRoute: ActivatedRoute) {
-    super(httpClient);
   }
 
   onButtonClick(): void {

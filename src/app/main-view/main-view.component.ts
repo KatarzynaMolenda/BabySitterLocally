@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
-import {CreateBabysitterComponent} from '../create-babysitter/create-babysitter.component';
 import {HttpClient} from '@angular/common/http';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-register',
