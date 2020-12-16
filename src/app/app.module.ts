@@ -11,6 +11,7 @@ import {NeedHelpComponent} from './need-help/need-help.component';
 import {RouterModule, Routes} from '@angular/router';
 import {OfferHelpComponent} from './offer-help/offer-help.component';
 import {MainViewComponent} from './main-view/main-view.component';
+import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 const root: Routes = [{
   path: 'create',
   component: CreateBabysitterComponent
@@ -30,6 +31,10 @@ const root: Routes = [{
   path: 'main',
   component: MainViewComponent
 }
+  , {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent
+  }
 ];
 @NgModule({
   declarations: [
@@ -39,7 +44,8 @@ const root: Routes = [{
     CreateBabysitterComponent,
     NeedHelpComponent,
     OfferHelpComponent,
-    MainViewComponent
+    MainViewComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
