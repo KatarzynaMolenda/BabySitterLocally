@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import {Babysitter} from '../model/babysitter';
-import {BabysitterService} from '../services/babysitter.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-create-babysitter',
@@ -9,19 +8,26 @@ import {BabysitterService} from '../services/babysitter.service';
   styleUrls: ['./create-babysitter.component.css']
 })
 export class CreateBabysitterComponent implements OnInit {
-  babySitter: Babysitter = {id: 0, firstName: '', lastName: '', phoneNumber: 0, primaryEmail: ''};
-  babysitterId = this.activatedRoute.snapshot.params.babysitterId;
-  newBabysitter: any;
+  babysitters: Babysitter[] = [];
+  newBabysitter: Babysitter = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: ''
+  };
 
-  constructor(private activatedRoute: ActivatedRoute,
-              private babysitterService: BabysitterService) {
+  constructor(public httpClient: HttpClient) {
   }
 
+  getFromServer(): void {
+    this.httpClient.get<Babysitter[]>('http://localhost:8080/babysitter')
+      .subscribe(babysitters => this.babysitters = babysitters);
+  }
   ngOnInit(): void {
-    this.babysitterService.getBabysitter(this.babySitter, this.babysitterId);
+    this.getFromServer();
   }
-
-  createBabysitter() {
-
+  createBabysitter(): void {
+    this.httpClient.post<Babysitter>('http://localhost:8080/babysitter', this.newBabysitter)
+      .subscribe(() => this.getFromServer());
   }
 }
