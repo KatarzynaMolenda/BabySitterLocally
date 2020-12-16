@@ -2,27 +2,26 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Babysitter} from '../model/babysitter';
 import {BabysitterService} from '../services/babysitter.service';
-import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-need-help',
-  templateUrl: './need-help.component.html',
-  styleUrls: ['./need-help.component.css']
+  templateUrl: './offer-help.component.html',
+  styleUrls: ['./offer-help.component.css']
 })
-export class NeedHelpComponent implements OnInit {
+export class OfferHelpComponent implements OnInit {
   babySitter: Babysitter = {id: 0, firstName: '', lastName: '', postalCode: ''};
   babysitterId = this.activatedRoute.snapshot.params.babysitterId;
-  newBabysitter: Babysitter;
-  private url = 'http://localhost:8080/babysitter';
+  newEvent: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private babysitterService: BabysitterService,
-              private httpClient: HttpClient) {
+              private babysitterService: BabysitterService) {
   }
 
   ngOnInit(): void {
     this.babysitterService.getBabysitter(this.babySitter, this.babysitterId);
   }
 
+  createEvent() {
 
+  }
 }
