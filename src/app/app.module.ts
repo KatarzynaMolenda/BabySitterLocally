@@ -10,6 +10,7 @@ import {CreateBabysitterComponent} from './create-babysitter/create-babysitter.c
 import {NeedHelpComponent} from './need-help/need-help.component';
 import {RouterModule, Routes} from '@angular/router';
 import {OfferHelpComponent} from './offer-help/offer-help.component';
+import {MainViewComponent} from './main-view/main-view.component';
 const root: Routes = [{
   path: 'create',
   component: CreateBabysitterComponent
@@ -25,6 +26,9 @@ const root: Routes = [{
 }, {
   path: 'register',
   component: RegisterComponent
+}, {
+  path: 'main',
+  component: MainViewComponent
 }
 ];
 @NgModule({
@@ -35,6 +39,7 @@ const root: Routes = [{
     CreateBabysitterComponent,
     NeedHelpComponent,
     OfferHelpComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,18 @@
 import {Component} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
-
-  onButtonClick(): void {
-    console.log('Kliknięto przycisk');
+  constructor(public httpClient: HttpClient, private activeRoute: ActivatedRoute, private router: Router) {
   }
 
   onFormSubmit(): void {
-    console.log('Zatwierdzono formularz');
+    console.log('Zatwierdzono formularz logowania');
+    this.router.navigateByUrl('/main');
   }
 
-  onTextInputChange(): void {
-    console.log('Zmieniono wartość pola tekstowego');
-  }
 }
