@@ -6,34 +6,23 @@
 </head>
 <body>
 <form (ngSubmit)="createBabysitter()">
-  <label>
-    First name: <input type="text" name="babysitterFirstName" [(ngModel)]="newBabysitter.firstName">
-  </label>
-</form>
-
-<form (ngSubmit)="createBabysitter()">
-  <label>
-    Last name: <input type="text" name="babysitterLastName" [(ngModel)]="newBabysitter.lastName">
-  </label>
-</form>
-
-<form (ngSubmit)="createBabysitter()">
-  <label>
-    Phone number: <input type="number" name="babysitterPhoneNumber" [(ngModel)]="newBabysitter.phoneNumber">
-  </label>
-</form>
-
-<form (ngSubmit)="createBabysitter()">
-  <label>
-    Primary e-mail: <input type="text" name="babysitterPrimaryEmail" [(ngModel)]="newBabysitter.primaryEmail">
-  </label>
-</form>
-
-<form (ngSubmit)="createBabysitter()">
-<checkbox>Do you have your own kids?</checkbox>
-  <label>
-    Own kids: <input type="text" name="babysitterLastName" [(ngModel)]="newBabysitter.lastName">
-  </label>
+  <div>
+    <label>
+      First name: <input type="text" name="firstName" [(ngModel)]="newBabysitter.firstName">
+    </label>
+    <label>
+      Last name: <input type="text" name="lastName" [(ngModel)]="newBabysitter.lastName">
+    </label>
+  </div>
+  <div>
+    <label>
+      Phone number: <input type="text" name="phoneNumber" [(ngModel)]="newBabysitter.phoneNumber">
+    </label>
+    <label>
+      E-mail: <input type="text" name="email" [(ngModel)]="newBabysitter.email">
+    </label>
+  </div>
+  <input type="submit">
 </form>
 </body>
 </html>
