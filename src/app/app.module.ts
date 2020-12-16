@@ -11,6 +11,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {OfferHelpComponent} from './offer-help/offer-help.component';
 import {MainViewComponent} from './main-view/main-view.component';
 import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
+import {ManageChildrenComponent} from './manage-children/manage-children.component';
 const root: Routes = [{
   path: 'create',
   component: RegisterComponent
@@ -29,6 +30,9 @@ const root: Routes = [{
 }, {
   path: 'main',
   component: MainViewComponent
+}, {
+  path: 'manage-children',
+  component: ManageChildrenComponent
 }
   , {
     path: 'forgot-password',
@@ -43,7 +47,8 @@ const root: Routes = [{
     NeedHelpComponent,
     OfferHelpComponent,
     MainViewComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ManageChildrenComponent
   ],
   imports: [
     BrowserModule,

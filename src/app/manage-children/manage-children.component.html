@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+<div><p>Lista twoich dzieci:</p></div>
+<table>
+  <thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Birth date</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let child of children">
+    <td>{{child.firstName}}</td>
+    <td>{{child.lastName}}</td>
+    <td>{{child.birthDate}}</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
