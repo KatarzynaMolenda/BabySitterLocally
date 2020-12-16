@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>I offer to help with your kids</title>
+  <title>I can help you with your kids!</title>
 </head>
 <body>
-<form (ngSubmit)="createEvent()">
-  <label>
-    Starting date <input type="datetime-local" name="eventStartingDate" [(ngModel)]="newEvent.startingDate">
-  </label>
-</form>
-<form (ngSubmit)="createEvent()">
-  <label>
-    Ending date: <input type="datetime-local" name="eventEndingDate" [(ngModel)]="newEvent.endingDate">
-  </label>
+<form>
+<div>Enter your desired date: <input type="date" id="start" name="start-time">
+  <input type="date" id="end" name="end-time"></div>
+
+<div>Enter your location: </div>
+  <input type="submit">
 </form>
 </body>
 </html>

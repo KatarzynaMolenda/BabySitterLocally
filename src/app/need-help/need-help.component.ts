@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./need-help.component.css']
 })
 export class NeedHelpComponent implements OnInit {
-  babySitter: Babysitter = {id: 0, firstName: '', lastName: '', postalCode: ''};
+  babySitter: Babysitter = {id: 0, firstName: '', lastName: '', phoneNumber: '', email: ''};
   babysitterId = this.activatedRoute.snapshot.params.babysitterId;
   newBabysitter: Babysitter;
   private url = 'http://localhost:8080/babysitter';
