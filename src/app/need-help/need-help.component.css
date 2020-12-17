@@ -1,3 +1,10 @@
+h1 {
+  font-size: 32px;
+  line-height: 52px;
+  letter-spacing: 10px;
+  font-family: Verdana, fantasy;
+}
+
 body {
   background: #fafafa url(https://jackrugile.com/images/misc/noise-diagonal.png);
   color: #444;
@@ -106,4 +113,8 @@ tbody:hover td {
 tbody:hover tr:hover td {
   color: #444;
   text-shadow: 0 1px 0 #fff;
+}
+picture{
+  margin-right: auto;
+  margin-left: auto;
 }
