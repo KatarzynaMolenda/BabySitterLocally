@@ -20,17 +20,11 @@ export class BabysitterService implements OnInit {
   };
 
   babysitters: Babysitter[] = [{
-    firstName: 'Kasia',
-    lastName: 'Molenda',
-    phoneNumber: '111111',
-    email: 'asd@asd.asd'
-  },
-    {
-      firstName: 'Marcin',
-      lastName: 'Nowak',
-      phoneNumber: '222222',
-      email: 'zxc@zxc.zxc'
-    }];
+    firstName: 'Trying',
+    lastName: 'to',
+    phoneNumber: 'load',
+    email: 'data'
+  }];
 
   private url = 'http://localhost:8080/babysitter';
 
@@ -51,7 +45,7 @@ export class BabysitterService implements OnInit {
 
   createBabysitter(): void {
     this.httpClient.post<Babysitter>(this.url, this.newBabysitter)
-      .subscribe(babysitter => this.babysitters.push());
+      .subscribe(() => this.babysitters.push());
 
   }
 
