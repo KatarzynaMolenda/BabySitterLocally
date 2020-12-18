@@ -19,10 +19,22 @@ export class BabysitterService implements OnInit {
     email: ''
   };
 
-  babysitters: Babysitter[] = [];
+  babysitters: Babysitter[] = [{
+    firstName: 'Kasia',
+    lastName: 'Molenda',
+    phoneNumber: '111111',
+    email: 'asd@asd.asd'
+  },
+    {
+      firstName: 'Marcin',
+      lastName: 'Nowak',
+      phoneNumber: '222222',
+      email: 'zxc@zxc.zxc'
+    }];
 
   private url = 'http://localhost:8080/babysitter';
 
+  // tslint:disable-next-line:contextual-lifecycle
   ngOnInit(): void {
     this.loadData();
   }
