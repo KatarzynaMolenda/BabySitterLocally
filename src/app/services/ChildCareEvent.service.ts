@@ -1,4 +1,3 @@
-import {OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ChildCareEvent} from '../model/childCareEvent';
 
@@ -10,8 +9,8 @@ export class ChildCareEventService {
 
   newEvent: ChildCareEvent = {
     name: '',
-    startDateTime: '',
-    endDateTime: '',
+    startTime: '',
+    endTime: '',
     childrenList: [],
     location: null
   };

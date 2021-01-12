@@ -9,16 +9,16 @@
 
   <div class="container">
     <div>
-      <label class="newEvent"  for="name"><b>Name:</b></label>
+      <label class="newEvent" for="name"><b>Name:</b></label>
       <input type="text" name="name" required id="name" [(ngModel)]="newEvent.name">
     </div>
     <div>
-      <label><b>Start date:</b></label>
-      <input type="datetime-local" name="startDate" [(ngModel)]="newEvent.startDateTime">
+      <label class="newEvent" for="startTime"><b>Start date:</b></label>
+      <input type="datetime-local" name="startTime" required id="startTime" [(ngModel)]="newEvent.startTime">
     </div>
     <div>
-      <label><b>End date:</b></label>
-      <input type="datetime-local" name="endDate" [(ngModel)]="newEvent.endDateTime">
+      <label class="newEvent" for="endTime"><b>End date:</b></label>
+      <input type="datetime-local" name="endTime" required id="endTime" [(ngModel)]="newEvent.endTime">
     </div>
     <div>
       <label><b>Children:</b></label>
