@@ -4,7 +4,8 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-register',
   templateUrl: './main-view.component.html',
-  styles: []
+  styleUrls: ['./main-view.component.css']
+
 })
 export class MainViewComponent {
 
