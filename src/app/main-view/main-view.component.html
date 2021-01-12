@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>Main View</title>
 </head>
 <body>
-<div>Let's just pretend that you logged in</div>
-<hr>
-<div>
-  <button [routerLink]="['../need']">I need help</button>
-  <button [routerLink]="['../offer']">I offer help</button>
-</div>
-<hr>
-<div><button [routerLink]="['../manage-children']">Manage your children</button></div>
+<div class="jumbotron">
+  <h1 class="display-7 text-center">Let's just pretend that you logged in</h1>
+  <div class="container">
+  <div class="row">
 
+    <div class="col-md-4 ml-md-auto">
+    <button class="btn btn-danger btn-lg" href="#" [routerLink]="['../need']">I need help!!</button>
+  </div>
+
+    <div class="col-md-4 ml-md-auto">
+    <button class="btn btn-success btn-lg" href="#"  [routerLink]="['../offer']">I offer help</button>
+        </div>
+  </div>
+  </div>
+  <div><button [routerLink]="['../manage-children']">Manage your children</button></div>
+  ​<picture>
+  <source srcset="https://cdn.unitycms.io/image/ocroped/1200,1200,1000,1000,0,0/uUvE2yHEKyY/A4ECkAL_4g9AGFNjkyZPw5.jpg" type="image/svg+xml">
+  <img src="https://cdn.unitycms.io/image/ocroped/1200,1200,1000,1000,0,0/uUvE2yHEKyY/A4ECkAL_4g9AGFNjkyZPw5.jpg" class="img-fluid img-thumbnail" alt="...">
+</picture>
+</div>
 </body>
 </html>
