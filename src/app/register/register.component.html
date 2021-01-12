@@ -20,26 +20,50 @@
     <div class="row form-group">
       <div class="col-md-3"></div>
       <div class="col-md-3">
-        <input type="text" class="form-control text-center bg-light text-dark" name="first-name" required id="first-name" placeholder="First Name"
-               [(ngModel)]="newBabysitter.firstName">
+        <input type="text" class="form-control text-center bg-light text-dark" name="first-name"
+               required id="first-name" placeholder="First Name"
+               [(ngModel)]="newBabysitter.firstName"
+               [class.is-invalid]="submitted && validationErrors.firstName"
+               [class.is-valid]="submitted && !validationErrors.firstName">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.firstName">
+          {{error}}
+        </div>
       </div>
       <div class="col-md-3">
-        <input type="text" class="form-control text-center bg-light text-dark" name="last-name"  required id="last-name" placeholder="Last Name"
-               [(ngModel)]="newBabysitter.lastName">
+        <input type="text" class="form-control text-center bg-light text-dark" name="last-name"
+               required id="last-name" placeholder="Last Name"
+               [(ngModel)]="newBabysitter.lastName"
+               [class.is-invalid]="submitted && validationErrors.lastName"
+               [class.is-valid]="submitted && !validationErrors.lastName">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.lastName">
+          {{error}}
+        </div>
       </div>
     </div>
     <div class="row form-group">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <input type="email" class="form-control text-center bg-light text-dark" name="email"  required id="email" placeholder="Email"
-               [(ngModel)]="newBabysitter.email">
+        <input type="email" class="form-control text-center bg-light text-dark" name="email"
+               required id="email" placeholder="Email"
+               [(ngModel)]="newBabysitter.email"
+               [class.is-invalid]="submitted && validationErrors.email"
+               [class.is-valid]="submitted && !validationErrors.email">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.email">
+          {{error}}
+        </div>
       </div>
     </div>
     <div class="row form-group">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <input type="text" class="form-control text-center bg-light text-dark" name="phone-number"  required id="phone-number" placeholder="Phone nr"
-               [(ngModel)]="newBabysitter.phoneNumber">
+        <input type="text" class="form-control text-center bg-light text-dark" name="phone-number"
+               required id="phone-number" placeholder="Phone nr"
+               [(ngModel)]="newBabysitter.phoneNumber"
+               [class.is-invalid]="submitted && validationErrors.phoneNumber"
+               [class.is-valid]="submitted && !validationErrors.phoneNumber">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.phoneNumber">
+          {{error}}
+        </div>
       </div>
     </div>
     <div class="row">
@@ -56,6 +80,6 @@
     <div class="col-md-3"></div>
     <p class="font-italic">All of it.™</p>
   </div>
-  </div>
+</div>
 </body>
 </html>

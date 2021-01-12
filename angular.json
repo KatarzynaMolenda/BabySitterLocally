@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "BabySitterLocally"
+  "defaultProject": "BabySitterLocally",
+  "cli": {
+    "analytics": "942b1f40-cc13-472a-a0b5-41f95b59cc0d"
+  }
 }
