@@ -18,7 +18,7 @@ export class ChildCareEventService {
     startTime: '',
     endTime: '',
     childrenList: [],
-    location: this.newLocation
+    location: null
   };
 
   events: ChildCareEvent[] = [];
