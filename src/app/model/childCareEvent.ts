@@ -1,4 +1,5 @@
 import {Child} from './child';
+import {Location} from './location';
 
 export interface ChildCareEvent {
   id?: number;
