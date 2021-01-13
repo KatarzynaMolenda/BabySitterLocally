@@ -15,7 +15,8 @@ export class RegisterComponent {
     firstName: '',
     lastName: '',
     email: '',
-    phoneNumber: ''
+    phoneNumber: '',
+    city: ''
   };
 
   validationErrors: BabysitterValidationErrors = {};

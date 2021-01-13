@@ -16,7 +16,8 @@ export class BabysitterService implements OnInit {
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    email: ''
+    email: '',
+    city: ''
   };
 
   babysitters: Babysitter[] = [];
