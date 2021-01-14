@@ -1,12 +1,15 @@
 import {HttpClient} from '@angular/common/http';
 import {ChildCareEvent} from '../model/childCareEvent';
 import {Location} from '../model/location';
+import {EventDTO} from '../model/eventDTO';
+
 
 export class ChildCareEventService {
   private url = 'http://localhost:8080/event';
 
   constructor(public httpClient: HttpClient) {
   }
+
   newLocation: Location = {
     street: '',
     postalCode: '',
@@ -17,8 +20,18 @@ export class ChildCareEventService {
     name: '',
     startTime: '',
     endTime: '',
-    childrenList: [],
+    children: [],
     location: null
+  };
+
+  newEventDTO: EventDTO = {
+    name: '',
+    startTime: '',
+    endTime: '',
+    children: [],
+    city: '',
+    postalCode: '',
+    street: ''
   };
 
   events: ChildCareEvent[] = [];
@@ -36,6 +49,11 @@ export class ChildCareEventService {
 
   createLocation(): void {
     this.httpClient.post<Location>('http://localhost:8080/location', this.newLocation)
+      .subscribe();
+  }
+
+  createDTO(): void {
+    this.httpClient.post<EventDTO>('http://localhost:8080/event/dto', this.newEventDTO)
       .subscribe();
   }
 }

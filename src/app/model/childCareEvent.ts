@@ -7,6 +7,6 @@ export interface ChildCareEvent {
   // nie widzę typu dla daty, więc na razie będzie string
   startTime: string;
   endTime: string;
-  childrenList: Child[];
+  children: Child[];
   location: Location;
 }
