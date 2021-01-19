@@ -11,8 +11,10 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   loggedUser: LoggedUser = null;
+  showAlert: boolean;
 
   constructor(public httpClient: HttpClient, private activeRoute: ActivatedRoute, private router: Router) {
+    this.showAlert = false;
   }
 
   onFormSubmit(): void {
@@ -20,6 +22,7 @@ export class LoginComponent implements OnInit {
     this.login(() => {
       // localStorage.removeItem('authorizationHeader');
       localStorage.clear();
+      this.showAlert = true;
       // alert('Niepoprawne dane logowania');
       this.username = '';
       this.password = '';

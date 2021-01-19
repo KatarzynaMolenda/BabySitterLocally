@@ -5,6 +5,10 @@
   <title>Login</title>
 </head>
 <body>
+<div class="col-md-4 alert alert-danger" role="alert" *ngIf="showAlert">
+  <butto  type="button" class="close" (click)="showAlert=false">&times;</butto>
+  <strong>Incorrect login details!</strong>
+</div>
 <div class="jumbotron" *ngIf="!checkIfLoggedIn()">
   <h1 class="display-4 text-center">Babysitter Locally</h1>
   <p class="lead text-center">Leave your kids to other people and have fun!</p>
