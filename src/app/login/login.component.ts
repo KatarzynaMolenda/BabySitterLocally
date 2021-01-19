@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
   onFormSubmit(): void {
     this.storeAuthorizationHeaderInLocalStorage();
     this.login(() => {
+      // localStorage.removeItem('authorizationHeader');
+      localStorage.clear();
       alert('Niepoprawne dane logowania');
       this.username = '';
       this.password = '';
