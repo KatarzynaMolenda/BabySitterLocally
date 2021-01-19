@@ -5,7 +5,7 @@
   <title>Login</title>
 </head>
 <body>
-<div class="jumbotron">
+<div class="jumbotron" *ngIf="!checkIfLoggedIn()">
   <h1 class="display-4 text-center">Babysitter Locally</h1>
   <p class="lead text-center">Leave your kids to other people and have fun!</p>
   <hr class="my-4">

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.login(() => {
       // localStorage.removeItem('authorizationHeader');
       localStorage.clear();
-      alert('Niepoprawne dane logowania');
+      // alert('Niepoprawne dane logowania');
       this.username = '';
       this.password = '';
     });
@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.checkIfLoggedIn()) {
+      this.router.navigateByUrl('/main');
+    }
   }
 
   private storeAuthorizationHeaderInLocalStorage(): void {
@@ -49,5 +52,9 @@ export class LoginComponent implements OnInit {
             errorCallback();
           }
         });
+  }
+
+  checkIfLoggedIn(): boolean {
+    return localStorage.getItem('authorizationHeader') !== null;
   }
 }
