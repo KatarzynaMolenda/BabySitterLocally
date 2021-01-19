@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
@@ -12,6 +12,8 @@ import {OfferHelpComponent} from './offer-help/offer-help.component';
 import {MainViewComponent} from './main-view/main-view.component';
 import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import {ManageChildrenComponent} from './manage-children/manage-children.component';
+import {AuthorizationInterceptor} from './authorization.interceptor';
+
 const root: Routes = [{
   path: 'create',
   component: RegisterComponent
@@ -39,6 +41,7 @@ const root: Routes = [{
     component: ForgotPasswordComponent
   }
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +62,11 @@ const root: Routes = [{
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [{
+    useClass: AuthorizationInterceptor,
+    multi: true,
+    provide: HTTP_INTERCEPTORS
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
