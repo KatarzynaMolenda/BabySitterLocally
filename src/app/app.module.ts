@@ -25,7 +25,7 @@ const root: Routes = [{
   path: 'need',
   component: NeedHelpComponent
 }, {
-  path: '',
+  path: 'login',
   component: LoginComponent
 }, {
   path: 'register',
@@ -36,11 +36,13 @@ const root: Routes = [{
 }, {
   path: 'manage-children',
   component: ManageChildrenComponent
+}, {
+  path: '',
+  component: WelcomeViewComponent
+}, {
+  path: 'forgot-password',
+  component: ForgotPasswordComponent
 }
-  , {
-    path: 'forgot-password',
-    component: ForgotPasswordComponent
-  }
 ];
 
 @NgModule({
