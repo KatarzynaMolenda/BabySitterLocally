@@ -1,4 +1,4 @@
-export class LoggedUser {
+export interface LoggedUser {
   username: string;
   role: string;
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ export class AppComponent {
   title: 'BabySitterLocally';
 
   constructor(private activeRoute: ActivatedRoute, private router: Router) {
+    // this.idleLogout();
   }
 
   logout(): void {
@@ -23,6 +24,13 @@ export class AppComponent {
     return localStorage.getItem('authorizationHeader') !== null;
   }
 
+// idleLogout(): void {
+//   let time: number;
+//   window.onload = () => resetTimer();
+//   function resetTimer(): void {
+//     clearTimeout(time);
+//     time = setTimeout(() => localStorage.removeItem('authorizationHeader'), 60000);
+//   }
 }
 
 
