@@ -47,7 +47,7 @@ export class RegisterComponent {
 
   creatUserAndBabysitter(): void {
     this.httpClient.post<UserBabysitterDTO>('http://localhost:8080/user', this.newUserBabysitterDTO)
-      .subscribe(() => this.router.navigateByUrl('/'),
+      .subscribe(() => this.router.navigateByUrl('/login'),
         errorResponse => {
           this.submitted = true;
           this.validationErrors = errorResponse.error;
