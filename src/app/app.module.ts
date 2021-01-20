@@ -13,6 +13,7 @@ import {MainViewComponent} from './main-view/main-view.component';
 import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
 import {ManageChildrenComponent} from './manage-children/manage-children.component';
 import {AuthorizationInterceptor} from './authorization.interceptor';
+import {WelcomeViewComponent} from './welcome-view/welcome-view.component';
 
 const root: Routes = [{
   path: 'create',
@@ -51,7 +52,8 @@ const root: Routes = [{
     OfferHelpComponent,
     MainViewComponent,
     ForgotPasswordComponent,
-    ManageChildrenComponent
+    ManageChildrenComponent,
+    WelcomeViewComponent
   ],
   imports: [
     BrowserModule,

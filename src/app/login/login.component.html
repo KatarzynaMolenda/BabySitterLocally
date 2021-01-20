@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="col-md-4 alert alert-danger" role="alert" *ngIf="showAlert">
-  <butto  type="button" class="close" (click)="showAlert=false">&times;</butto>
+  <button  type="button" class="close" (click)="showAlert=false">&times;</button>
   <strong>Incorrect login details!</strong>
 </div>
 <div class="jumbotron" *ngIf="!checkIfLoggedIn()">
