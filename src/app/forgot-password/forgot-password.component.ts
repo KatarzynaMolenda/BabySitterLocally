@@ -16,4 +16,7 @@ export class ForgotPasswordComponent {
     this.router.navigateByUrl('/');
   }
 
+  goBack(): void {
+    window.history.back();
+  }
 }
