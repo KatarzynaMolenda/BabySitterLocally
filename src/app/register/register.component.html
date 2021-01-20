@@ -22,13 +22,22 @@
       <div class="col-md-3">
         <input type="text" class="form-control text-center bg-light text-dark" name="username"
                required id="username" placeholder="Username"
-               [(ngModel)]="newUserBabysitterDTO.username">
+               [(ngModel)]="newUserBabysitterDTO.username"
+               [class.is-invalid]="submitted && validationErrors.username"
+               [class.is-valid]="submitted && !validationErrors.username">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.username">
+          {{error}}
+        </div>
       </div>
       <div class="col-md-3">
         <input type="text" class="form-control text-center bg-light text-dark" name="password"
                required id="password" placeholder="Password"
-               [(ngModel)]="newUserBabysitterDTO.password">
-
+               [(ngModel)]="newUserBabysitterDTO.password"
+        [class.is-invalid]="submitted && validationErrors.password"
+        [class.is-valid]="submitted && !validationErrors.password">
+        <div class="invalid-feedback" *ngFor="let error of validationErrors.password">
+          {{error}}
+        </div>
         </div>
       </div>
     <div class="row form-group">
