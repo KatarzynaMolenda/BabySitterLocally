@@ -20,7 +20,7 @@
     <td>{{child.firstName}}</td>
     <td>{{child.lastName}}</td>
     <td>{{child.birthDate}}</td>
-    <td>{{child.delete()}}</td>
+    <td><button (click)="delete(child.id)">Delete</button></td>
   </tr>
   </tbody>
 </table>
