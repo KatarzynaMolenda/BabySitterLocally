@@ -37,7 +37,7 @@ export class ChildService implements OnInit {
   }
 
   loadData(): void {
-    this.httpClient.get<Child[]>(this.url)
+    this.httpClient.get<Child[]>('http://localhost:8080/child/getByUser')
       .subscribe(children => this.children = children);
   }
 
