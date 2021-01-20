@@ -13,7 +13,7 @@ export class ForgotPasswordComponent {
 
   onFormSubmit(): void {
     console.log('Submitted Forgot Password Form');
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/login');
   }
 
   goBack(): void {
