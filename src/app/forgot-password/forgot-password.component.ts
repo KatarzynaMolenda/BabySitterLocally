@@ -23,7 +23,6 @@ export class ForgotPasswordComponent {
     console.log('Submitted Forgot Password Form');
     this.httpClient.get('http://localhost:8080/mailer/RemindPassword/' + this.email)
       .subscribe();
-    this.router.navigateByUrl('/login');
   }
 
   goBack(): void {
