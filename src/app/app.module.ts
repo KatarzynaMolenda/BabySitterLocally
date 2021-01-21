@@ -14,6 +14,7 @@ import {ForgotPasswordComponent} from './forgot-password/forgot-password.compone
 import {ManageChildrenComponent} from './manage-children/manage-children.component';
 import {AuthorizationInterceptor} from './authorization.interceptor';
 import {WelcomeViewComponent} from './welcome-view/welcome-view.component';
+import {JoinEventsComponent} from './join-events/join-events.component';
 
 const root: Routes = [{
   path: 'create',
@@ -42,7 +43,11 @@ const root: Routes = [{
 }, {
   path: 'forgot-password',
   component: ForgotPasswordComponent
-}
+},
+  {
+    path: 'join-events',
+    component: JoinEventsComponent
+  }
 ];
 
 @NgModule({
@@ -55,7 +60,8 @@ const root: Routes = [{
     MainViewComponent,
     ForgotPasswordComponent,
     ManageChildrenComponent,
-    WelcomeViewComponent
+    WelcomeViewComponent,
+    JoinEventsComponent
   ],
   imports: [
     BrowserModule,
