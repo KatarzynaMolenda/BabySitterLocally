@@ -24,5 +24,46 @@
   </tr>
   </tbody>
 </table>
+<br>
+<br>
+<br>
+
+<form class="text-center" (ngSubmit)="createChild()">
+
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <label><b>Add a new child</b></label>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-3">
+      <input type="text" class="form-control text-center bg-light text-dark" name="firstname"
+             required id="firstname" placeholder="firstname"
+             [(ngModel)]="newChild.firstName">
+    </div>
+    <div class="col-md-3">
+      <input type="text" class="form-control text-center bg-light text-dark" name="lastname"
+             required id="lastname" placeholder="lastname"
+             [(ngModel)]="newChild.lastName">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-6">
+      <input type="text" class="form-control text-center bg-light text-dark" name="birthdate"
+             required id="birthdate" placeholder="birthdate"
+             [(ngModel)]="newChild.birthDate">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+  </div>
+
+</form>
+
 </body>
 </html>

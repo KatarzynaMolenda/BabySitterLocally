@@ -1,6 +1,7 @@
 import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Child} from '../model/child';
+import {delay} from "rxjs/operators";
 
 
 @Injectable({
@@ -47,13 +48,13 @@ export class ChildService implements OnInit {
   }
 
   createChild(): void {
-    this.httpClient.post<Child>(this.url, this.newChild)
-      .subscribe(child => this.children.push());
-
+    this.httpClient.post<Child>('http://localhost:8080/child/addForLoggedUser', this.newChild)
+      .subscribe(() => this.loadData());
   }
 
   getChild(child: Child, id: number): void {
     this.httpClient.get<Child>(this.url + id)
       .subscribe(childFromHttps => child = childFromHttps);
+
   }
 }
