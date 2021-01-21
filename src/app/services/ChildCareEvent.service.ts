@@ -37,7 +37,7 @@ export class ChildCareEventService {
   events: ChildCareEvent[] = [];
 
 
-  loadEvents(): void {
+  loadData(): void {
     this.httpClient.get<ChildCareEvent[]>(this.url)
       .subscribe(events => this.events = events);
   }
